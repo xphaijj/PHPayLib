@@ -9,11 +9,11 @@ Pod::Spec.new do |s|
                         支付SDK集成，方便日常使用
                        DESC
 
-  s.homepage         = 'https://github.com/xphaijj0305@126.com/PHPayLib'
+  s.homepage         = 'https://github.com/xphaijj/PHPayLib.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'xphaijj0305@126.com' => '2112787533@qq.com' }
-  s.source           = { :git => 'https://github.com/xphaijj0305@126.com/PHPayLib.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/xphaijj/PHPayLib.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
