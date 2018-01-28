@@ -1,0 +1,1 @@
+../../../../../PHPayLib/Classes/Channel/WxPay/PHWxPay.h

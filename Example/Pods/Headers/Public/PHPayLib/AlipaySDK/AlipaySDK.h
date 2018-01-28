@@ -1,0 +1,1 @@
+../../../../../../PHPayLib/Classes/Channel/AliPay/AlipaySDK.framework/Headers/AlipaySDK.h

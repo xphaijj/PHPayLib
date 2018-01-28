@@ -1,0 +1,12 @@
+CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/PHPayLib
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/../../PHPayLib/Classes/Channel/AliPay"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/PHPayLib" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/FMDB" "${PODS_ROOT}/Headers/Public/GDPerformanceView" "${PODS_ROOT}/Headers/Public/MJExtension" "${PODS_ROOT}/Headers/Public/Masonry" "${PODS_ROOT}/Headers/Public/OpenSSL" "${PODS_ROOT}/Headers/Public/PHBaseLib" "${PODS_ROOT}/Headers/Public/PHPayLib" "${PODS_ROOT}/Headers/Public/RMUniversalAlert" "${PODS_ROOT}/Headers/Public/ReactiveObjC" "${PODS_ROOT}/Headers/Public/SVProgressHUD" "${PODS_ROOT}/Headers/Public/UIActionSheet+Blocks" "${PODS_ROOT}/Headers/Public/UIAlertController+Blocks" "${PODS_ROOT}/Headers/Public/UIAlertView+Blocks" "${PODS_ROOT}/Headers/Public/WechatOpenSDK"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/../../PHPayLib/Classes/Channel/UnionPay" "${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking" "${PODS_CONFIGURATION_BUILD_DIR}/FMDB" "${PODS_CONFIGURATION_BUILD_DIR}/GDPerformanceView" "${PODS_CONFIGURATION_BUILD_DIR}/MJExtension" "${PODS_CONFIGURATION_BUILD_DIR}/Masonry" "${PODS_CONFIGURATION_BUILD_DIR}/PHBaseLib" "${PODS_CONFIGURATION_BUILD_DIR}/RMUniversalAlert" "${PODS_CONFIGURATION_BUILD_DIR}/ReactiveObjC" "${PODS_CONFIGURATION_BUILD_DIR}/SVProgressHUD" "${PODS_CONFIGURATION_BUILD_DIR}/UIActionSheet+Blocks" "${PODS_CONFIGURATION_BUILD_DIR}/UIAlertController+Blocks" "${PODS_CONFIGURATION_BUILD_DIR}/UIAlertView+Blocks"
+OTHER_LDFLAGS = -l"PaymentControl" -framework "AlipaySDK" -framework "CoreMotion"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_ROOT = ${SRCROOT}
+PODS_TARGET_SRCROOT = ${PODS_ROOT}/../..
+PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.${PRODUCT_NAME:rfc1034identifier}
+SKIP_INSTALL = YES
