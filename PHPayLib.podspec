@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PHPayLib'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = '支付集成'
 
   s.description      = <<-DESC

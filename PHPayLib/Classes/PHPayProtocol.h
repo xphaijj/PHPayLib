@@ -12,10 +12,7 @@
 #import "PHPayOrder.h"
 #import "PHPayMacro.h"
 
-
-
 @protocol PHPayProtocol <NSObject>
-
 
 /**
  支付需要实现的方法
