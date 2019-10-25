@@ -18,8 +18,6 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  
-  
   s.subspec 'Core' do |sp|
     sp.source_files = 'PHPayLib/Classes/*.{h,m}'
     sp.public_header_files = 'PHPayLib/Classes/*.h'
@@ -33,12 +31,14 @@ Pod::Spec.new do |s|
     sp.public_header_files = 'PHPayLib/Classes/Channel/AliPay/*.h','PHPayLib/Classes/Channel/AliPay/Util/*.h'
     sp.vendored_frameworks = 'PHPayLib/Classes/Channel/Alipay/*.framework'
     sp.resources = 'PHPayLib/Classes/Channel/Alipay/*.bundle'
+    sp.dependency 'PHPayLib/Core'
   end
   
   s.subspec 'WeChatPay' do |sp|
     sp.source_files = 'PHPayLib/Classes/Channel/WxPay/*.{h,m}'
     sp.public_header_files = 'PHPayLib/Classes/Channel/WxPay/*.h'
     sp.dependency 'WechatOpenSDK'
+    sp.dependency 'PHPayLib/Core'
   end
   
   s.subspec 'UnionPay' do |sp|
@@ -46,16 +46,19 @@ Pod::Spec.new do |s|
     sp.public_header_files = 'PHPayLib/Classes/Channel/UnionPay/*.h'
     sp.vendored_libraries = 'PHPayLib/Classes/Channel/UnionPay/*.a'
     sp.frameworks = 'CoreMotion'
+    sp.dependency 'PHPayLib/Core'
   end
   
   s.subspec 'ApplePay' do |sp|
     sp.source_files = 'PHPayLib/Classes/Channel/ApplePay/*.{h,m}'
     sp.public_header_files = 'PHPayLib/Classes/Channel/ApplePay/*.h'
+    sp.dependency 'PHPayLib/Core'
   end
   
   s.subspec 'IapPay' do |sp|
     sp.source_files = 'PHPayLib/Classes/Channel/IapPay/*.{h,m}'
     sp.public_header_files = 'PHPayLib/Classes/Channel/IapPay/*.h'
+    sp.dependency 'PHPayLib/Core'
   end
   
   

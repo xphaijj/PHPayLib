@@ -46,7 +46,12 @@
         "PHPayLib/Classes/Channel/AliPay/Util/*.h"
       ],
       "vendored_frameworks": "PHPayLib/Classes/Channel/Alipay/*.framework",
-      "resources": "PHPayLib/Classes/Channel/Alipay/*.bundle"
+      "resources": "PHPayLib/Classes/Channel/Alipay/*.bundle",
+      "dependencies": {
+        "PHPayLib/Core": [
+
+        ]
+      }
     },
     {
       "name": "WeChatPay",
@@ -54,6 +59,9 @@
       "public_header_files": "PHPayLib/Classes/Channel/WxPay/*.h",
       "dependencies": {
         "WechatOpenSDK": [
+
+        ],
+        "PHPayLib/Core": [
 
         ]
       }
@@ -63,17 +71,32 @@
       "source_files": "PHPayLib/Classes/Channel/UnionPay/*.{h,m,mm}",
       "public_header_files": "PHPayLib/Classes/Channel/UnionPay/*.h",
       "vendored_libraries": "PHPayLib/Classes/Channel/UnionPay/*.a",
-      "frameworks": "CoreMotion"
+      "frameworks": "CoreMotion",
+      "dependencies": {
+        "PHPayLib/Core": [
+
+        ]
+      }
     },
     {
       "name": "ApplePay",
       "source_files": "PHPayLib/Classes/Channel/ApplePay/*.{h,m}",
-      "public_header_files": "PHPayLib/Classes/Channel/ApplePay/*.h"
+      "public_header_files": "PHPayLib/Classes/Channel/ApplePay/*.h",
+      "dependencies": {
+        "PHPayLib/Core": [
+
+        ]
+      }
     },
     {
       "name": "IapPay",
       "source_files": "PHPayLib/Classes/Channel/IapPay/*.{h,m}",
-      "public_header_files": "PHPayLib/Classes/Channel/IapPay/*.h"
+      "public_header_files": "PHPayLib/Classes/Channel/IapPay/*.h",
+      "dependencies": {
+        "PHPayLib/Core": [
+
+        ]
+      }
     }
   ]
 }
