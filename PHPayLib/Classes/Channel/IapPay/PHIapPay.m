@@ -8,6 +8,7 @@
 
 #import "PHIapPay.h"
 #import <StoreKit/StoreKit.h>
+#import <YLT_BaseLib/YLT_BaseLib.h>
 #import "PHPayErrorUtils.h"
 #import "PHPayError.h"
 
@@ -86,13 +87,13 @@
         [[SKPaymentQueue defaultQueue] addPayment:payment];
     }
     else {
-        PHLogError(@"%@", @"应用内购产品为空");
+        YLT_LogError(@"%@", @"应用内购产品为空");
         _complation(_order, [PHPayErrorUtils create:PHPayCodeErrorParams]);
     }
 }
 
 - (void)requestDidFinish:(SKRequest *)request {
-    PHLog(@"完成");
+    YLT_Log(@"完成");
 }
 
 - (void)request:(SKRequest *)request didFailWithError:(NSError *)error {

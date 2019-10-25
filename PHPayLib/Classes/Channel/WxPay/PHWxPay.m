@@ -11,6 +11,7 @@
 #import "WXApi.h"
 #import "WXApiObject.h"
 #import "PHPayErrorUtils.h"
+#import <UIKit/UIKit.h>
 
 @interface PHWxPay ()<WXApiDelegate> {
 }
@@ -26,7 +27,7 @@
     _order = payOrder;
     _complation = complation;
     dispatch_async(dispatch_get_main_queue(), ^{
-        if ([WXApi registerApp:payOrder.credential[@"appid"]]) {
+        if ([WXApi registerApp:payOrder.credential[@"appid"] universalLink:payOrder.credential[@"universalLink"]]) {
             NSDictionary *result = payOrder.credential;
             PayReq *req = [[PayReq alloc] init];
             req.partnerId = result[@"partnerid"];
@@ -35,7 +36,8 @@
             req.timeStamp = (UInt32)[result[@"timestamp"] integerValue];
             req.package = result[@"package"];
             req.sign = result[@"sign"];
-            [WXApi sendReq:req];
+            [WXApi sendReq:req completion:^(BOOL success) {
+            }];
         }
         else {
             _complation(_order, [PHPayErrorUtils create:PHPayCodeWxRegisterFailed]);

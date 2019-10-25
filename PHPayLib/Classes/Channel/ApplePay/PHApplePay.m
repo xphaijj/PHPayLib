@@ -47,17 +47,17 @@
 }
 
 -(void)paymentAuthorizationViewController:(PKPaymentAuthorizationViewController *)controller didSelectShippingContact:(PKContact *)contact completion:(void (^)(PKPaymentAuthorizationStatus, NSArray<PKShippingMethod *> * _Nonnull, NSArray<PKPaymentSummaryItem *> * _Nonnull))completion {
-    PHLog(@"didSelectShippingContact");
+    YLT_Log(@"didSelectShippingContact");
 }
 
 - (void)paymentAuthorizationViewController:(PKPaymentAuthorizationViewController *)controller
                    didSelectShippingMethod:(PKShippingMethod *)shippingMethod
                                 completion:(void (^)(PKPaymentAuthorizationStatus, NSArray<PKPaymentSummaryItem *> * _Nonnull))completion {
-    PHLog(@"didSelectShippingMethod");
+    YLT_Log(@"didSelectShippingMethod");
 }
 
 - (void)paymentAuthorizationViewControllerWillAuthorizePayment:(PKPaymentAuthorizationViewController *)controller {
-    PHLog(@"paymentAuthorizationViewControllerWillAuthorizePayment");
+    YLT_Log(@"paymentAuthorizationViewControllerWillAuthorizePayment");
 }
 
 - (void)paymentAuthorizationViewController:(PKPaymentAuthorizationViewController *)controller didAuthorizePayment:(PKPayment *)payment completion:(void (^)(PKPaymentAuthorizationStatus))completion {

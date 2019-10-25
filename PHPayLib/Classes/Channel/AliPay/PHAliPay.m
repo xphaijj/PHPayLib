@@ -11,6 +11,7 @@
 #import "PHAliPay.h"
 #import "PHPayUtils.h"
 #import "PHPayErrorUtils.h"
+#import <ReactiveObjC/ReactiveObjC.h>
 #import <AlipaySDK/AlipaySDK.h>
 
 @interface PHAliPay () {
@@ -27,13 +28,13 @@
     _order = payOrder;
     _complation = complation;
     dispatch_async(dispatch_get_main_queue(), ^{
-        PH_Weak(self);
+        @weakify(self);
         NSString *orderInfo = [self orderDescription];
         NSString *signString = [PHPayUtils doRsa:orderInfo];
         NSString *orderString = [NSString stringWithFormat:@"%@&sign=\"%@\"&sign_type=\"%@\"",
                                  orderInfo, signString, @"RSA"];
         [[AlipaySDK defaultService] payOrder:orderString fromScheme:scheme callback:^(NSDictionary *resultDic) {
-            PH_Strong(self);
+            @strongify(self);
             [self handleDictionary:resultDic];
         }];
     });
@@ -42,15 +43,15 @@
 
 - (BOOL)handleOpenURL:(NSURL *)url options:(NSDictionary *)options {
     if ([url.host isEqualToString:@"safepay"] || [url.host isEqualToString:@"platformapi"]) {//支付宝回调
-        PH_Weak(self);
+        @weakify(self);
         //这个是进程KILL掉之后也会调用，这个只是第一次授权回调，同时也会返回支付信息
         [[AlipaySDK defaultService] processAuth_V2Result:url standbyCallback:^(NSDictionary *resultDic) {
-            PH_Strong(self);
+            @strongify(self);
             [self handleDictionary:resultDic];
         }];
         //跳转支付宝钱包进行支付，处理支付结果，这个只是辅佐订单支付结果回调
         [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
-            PH_Strong(self);
+            @strongify(self);
             [self handleDictionary:resultDic];
         }];
     }

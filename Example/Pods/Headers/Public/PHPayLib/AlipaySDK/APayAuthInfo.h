@@ -1,1 +1,0 @@
-../../../../../../PHPayLib/Classes/Channel/AliPay/AlipaySDK.framework/Headers/APayAuthInfo.h

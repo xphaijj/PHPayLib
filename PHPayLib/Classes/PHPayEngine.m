@@ -26,7 +26,7 @@
 
 @implementation PHPayEngine
 
-PH_ShareInstance(PHPayEngine);
+YLT_ShareInstance(PHPayEngine);
 
 - (void)ph_init {
     self.channelInfo = @{
@@ -44,7 +44,7 @@ PH_ShareInstance(PHPayEngine);
           complation:(PHPayComplation)complation {
     if (complation == nil) {
         complation = ^(id response, PHPayError *error) {
-            PHLog(@"%@  %@", response, error.errorMsg);
+            YLT_LogError(@"%@  %@", response, error.errorMsg);
         };
     }
     if (payOrder == nil) {
@@ -78,7 +78,7 @@ PH_ShareInstance(PHPayEngine);
         //调用具体的实现
         [pay payWithOrder:payOrder target:target scheme:scheme complation:complation];
     } @catch (NSException *exception) {
-        PHLogError(@"支付异常 %@", exception);
+        YLT_LogError(@"支付异常 %@", exception);
     } @finally {
     }
     

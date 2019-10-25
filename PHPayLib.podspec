@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PHPayLib'
-  s.version          = '0.0.2'
+  s.version          = '0.0.5'
   s.summary          = '支付集成'
 
   s.description      = <<-DESC
@@ -22,7 +22,8 @@ Pod::Spec.new do |s|
   s.public_header_files = 'PHPayLib/Classes/*.h'
   
   s.dependency 'OpenSSL'
-  s.dependency 'PHBaseLib'
+  s.dependency 'ReactiveObjC'
+  s.dependency 'YLT_BaseLib'
   
   s.subspec 'AliPay' do |sp|
     sp.source_files = 'PHPayLib/Classes/Channel/AliPay/*.{h,m}','PHPayLib/Classes/Channel/AliPay/Util/*.{h,m}'
@@ -38,7 +39,7 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'UnionPay' do |sp|
-    sp.source_files = 'PHPayLib/Classes/Channel/UnionPay/*.{h,m}'
+    sp.source_files = 'PHPayLib/Classes/Channel/UnionPay/*.{h,m,mm}'
     sp.public_header_files = 'PHPayLib/Classes/Channel/UnionPay/*.h'
     sp.vendored_libraries = 'PHPayLib/Classes/Channel/UnionPay/*.a'
     sp.frameworks = 'CoreMotion'

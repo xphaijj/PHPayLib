@@ -4,6 +4,7 @@ platform :ios, '9.0'
 
 target 'PHPayLib_Example' do
   pod 'PHPayLib', :path => '../'
+  pod 'PHPayLib/WeChatPay', :path => '../'
 
   target 'PHPayLib_Tests' do
     inherit! :search_paths

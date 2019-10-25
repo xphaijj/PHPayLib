@@ -7,9 +7,9 @@
 //  Copyright © 2017年 項普華. All rights reserved.
 //
 
-#import "PHModel.h"
+#import <YLT_BaseLib/YLT_BaseLib.h>
 
-@interface PHPayOrder : PHModel
+@interface PHPayOrder : YLT_BaseModel
 
 //共性问题
 @property (nonatomic, strong) NSString *orderId;

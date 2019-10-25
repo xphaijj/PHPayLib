@@ -9,7 +9,7 @@
 //
 
 #import "PHPayErrorUtils.h"
-#import "PHMacro.h"
+#import <YLT_BaseLib/YLT_BaseLib.h>
 
 @implementation PHPayErrorUtils
 
@@ -18,65 +18,53 @@
     error.errorCode = code;
 #if DEBUG
     switch (code) {
-        case PHPayCodeInvalidChannel:
-        {
-            PHLogError(@"渠道信息验证失败");
+        case PHPayCodeInvalidChannel: {
+            YLT_LogError(@"渠道信息验证失败");
         }
             break;
-        case PHPayCodeErrorParams:
-        {
-            PHLogError(@"支付参数异常");
+        case PHPayCodeErrorParams: {
+            YLT_LogError(@"支付参数异常");
         }
             break;
-        case PHPayCodeErrorTimeOut:
-        {
-            PHLogError(@"支付超时");
+        case PHPayCodeErrorTimeOut: {
+            YLT_LogError(@"支付超时");
         }
             break;
-        case PHPayCodeErrorConnection:
-        {
-            PHLogError(@"链接异常");
+        case PHPayCodeErrorConnection: {
+            YLT_LogError(@"链接异常");
         }
             break;
-        case PHPayCodeTargetIsNil:
-        {
-            PHLogError(@"target目标为空");
+        case PHPayCodeTargetIsNil: {
+            YLT_LogError(@"target目标为空");
         }
             break;
-        case PHPayCodeErrorCall:
-        {
-            PHLogError(@"调起支付方式失败");
+        case PHPayCodeErrorCall: {
+            YLT_LogError(@"调起支付方式失败");
         }
             break;
 
-        case PHPayCodeCanceled:
-        {
-            PHLog(@"取消支付");
+        case PHPayCodeCanceled: {
+            YLT_LogWarn(@"取消支付");
         }
             break;
-        case PHPaySuccess:
-        {
-            PHLog(@"支付成功");
+        case PHPaySuccess: {
+            YLT_LogWarn(@"支付成功");
         }
             break;
-        case PHPayFailed:
-        {
-            PHLogError(@"支付失败");
+        case PHPayFailed: {
+            YLT_LogError(@"支付失败");
         }
             break;
-        case PHPayCodeWxNoInstalled:
-        {
-            PHLogInfo(@"微信未安装");
+        case PHPayCodeWxNoInstalled: {
+            YLT_LogWarn(@"微信未安装");
         }
             break;
-        case PHPayCodeWxRegisterFailed:
-        {
-            PHLogError(@"微信appid注册失败");
+        case PHPayCodeWxRegisterFailed: {
+            YLT_LogError(@"微信appid注册失败");
         }
             break;
-        case PHPayCodeErrorUnknown:
-        {
-            PHLogError(@"未知异常");
+        case PHPayCodeErrorUnknown: {
+            YLT_LogError(@"未知异常");
         }
             break;
             

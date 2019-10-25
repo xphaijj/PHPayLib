@@ -8,12 +8,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <PHBaseLib/PHMacro.h>
+#import <YLT_BaseLib/YLT_BaseLib.h>
 #import "PHPayProtocol.h"
 #import "PHPayChannelProtocol.h"
 
 @interface PHPayEngine : NSObject<PHPayProtocol>
 
-PH_ShareInstanceHeader(PHPayEngine);
+YLT_ShareInstanceHeader(PHPayEngine);
 
 @end
