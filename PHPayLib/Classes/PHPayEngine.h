@@ -9,6 +9,7 @@
 
 #import <Foundation/Foundation.h>
 #import <YLT_BaseLib/YLT_BaseLib.h>
+#import <UIKit/UIKit.h>
 #import "PHPayProtocol.h"
 #import "PHPayChannelProtocol.h"
 

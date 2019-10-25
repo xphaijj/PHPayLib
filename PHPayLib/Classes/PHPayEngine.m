@@ -7,19 +7,16 @@
 //  Copyright © 2017年 項普華. All rights reserved.
 //
 
+#import <CoreGraphics/CoreGraphics.h>
+#import <Foundation/Foundation.h>
 #import "PHPayEngine.h"
-#import "PHUnionPay.h"
-#import "PHAliPay.h"
-#import "PHWxPay.h"
-#import "PHApplePay.h"
-#import "PHIapPay.h"
 #import "PHPayMacro.h"
 #import "PHPayErrorUtils.h"
 
 @interface PHPayEngine () {
 }
 //支付渠道信息
-@property (nonatomic, strong) NSDictionary *channelInfo;
+@property (nonatomic, strong) NSMutableDictionary *channelInfo;
 @property (nonatomic, strong) PHPayOrder *payOrder;
 
 @end
@@ -29,13 +26,21 @@
 YLT_ShareInstance(PHPayEngine);
 
 - (void)ph_init {
-    self.channelInfo = @{
-                         PAY_UNIONPAY:[[PHUnionPay alloc] init],
-                         PAY_WXPAY:[[PHWxPay alloc] init],
-                         PAY_ALIPAY:[[PHAliPay alloc] init],
-                         PAY_APPLE:[[PHApplePay alloc] init],
-                         PAY_IAP:[[PHIapPay alloc] init]
-                         };
+    self.channelInfo = [[NSMutableDictionary alloc] init];
+    NSArray<NSDictionary *> *channels = @[
+                                            @{PAY_UNIONPAY:@"PHUnionPay"},
+                                            @{PAY_WXPAY:@"PHWxPay"},
+                                            @{PAY_ALIPAY:@"PHAliPay"},
+                                            @{PAY_APPLE:@"PHApplePay"},
+                                            @{PAY_IAP:@"PHIapPay"}];
+    [channels enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *key = obj.allKeys.firstObject;
+        NSString *value = obj.allValues.firstObject;
+        Class cls = NSClassFromString(value);
+        if (cls != NULL) {
+            [self.channelInfo setObject:[[cls alloc] init] forKey:key];
+        }
+    }];
 }
 
 - (void)payWithOrder:(PHPayOrder *)payOrder
