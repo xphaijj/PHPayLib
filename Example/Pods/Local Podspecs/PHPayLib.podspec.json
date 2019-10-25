@@ -18,20 +18,23 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "PHPayLib/Classes/*.{h,m}",
-  "public_header_files": "PHPayLib/Classes/*.h",
-  "dependencies": {
-    "OpenSSL-Universal": [
-
-    ],
-    "ReactiveObjC": [
-
-    ],
-    "YLT_BaseLib": [
-
-    ]
-  },
   "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "PHPayLib/Classes/*.{h,m}",
+      "public_header_files": "PHPayLib/Classes/*.h",
+      "dependencies": {
+        "OpenSSL-Universal": [
+
+        ],
+        "ReactiveObjC": [
+
+        ],
+        "YLT_BaseLib": [
+
+        ]
+      }
+    },
     {
       "name": "AliPay",
       "source_files": [

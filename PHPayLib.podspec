@@ -18,12 +18,15 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'PHPayLib/Classes/*.{h,m}'
-  s.public_header_files = 'PHPayLib/Classes/*.h'
   
-  s.dependency 'OpenSSL-Universal'
-  s.dependency 'ReactiveObjC'
-  s.dependency 'YLT_BaseLib'
+  
+  s.subspec 'Core' do |sp|
+    sp.source_files = 'PHPayLib/Classes/*.{h,m}'
+    sp.public_header_files = 'PHPayLib/Classes/*.h'
+    sp.dependency 'OpenSSL-Universal'
+    sp.dependency 'ReactiveObjC'
+    sp.dependency 'YLT_BaseLib'
+  end
   
   s.subspec 'AliPay' do |sp|
     sp.source_files = 'PHPayLib/Classes/Channel/AliPay/*.{h,m}','PHPayLib/Classes/Channel/AliPay/Util/*.{h,m}'
