@@ -9,7 +9,7 @@
 #import "PHApplePay.h"
 #import <PassKit/PassKit.h>
 #import "PHPayErrorUtils.h"
-#import "PHPayUtils.h"
+#import <YLT_BaseLib/YLT_BaseLib.h>
 
 @interface PHApplePay ()<PKPaymentAuthorizationViewControllerDelegate> {
 }
@@ -61,7 +61,7 @@
 }
 
 - (void)paymentAuthorizationViewController:(PKPaymentAuthorizationViewController *)controller didAuthorizePayment:(PKPayment *)payment completion:(void (^)(PKPaymentAuthorizationStatus))completion {
-    if (payment.token && [PHPayUtils validString:payment.token.transactionIdentifier]) {
+    if (payment.token && payment.token.transactionIdentifier.ylt_isValid) {
         _complation(_order, [PHPayErrorUtils create:PHPaySuccess]);
     }
     completion(PKPaymentAuthorizationStatusSuccess);

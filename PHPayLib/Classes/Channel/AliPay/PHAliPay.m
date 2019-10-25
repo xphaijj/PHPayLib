@@ -9,10 +9,10 @@
 //
 
 #import "PHAliPay.h"
-#import "PHPayUtils.h"
 #import "PHPayErrorUtils.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <AlipaySDK/AlipaySDK.h>
+#import <UIKit/UIKit.h>
 
 @interface PHAliPay () {
 }
@@ -29,17 +29,12 @@
     _complation = complation;
     dispatch_async(dispatch_get_main_queue(), ^{
         @weakify(self);
-        NSString *orderInfo = [self orderDescription];
-        NSString *signString = [PHPayUtils doRsa:orderInfo];
-        NSString *orderString = [NSString stringWithFormat:@"%@&sign=\"%@\"&sign_type=\"%@\"",
-                                 orderInfo, signString, @"RSA"];
-        [[AlipaySDK defaultService] payOrder:orderString fromScheme:scheme callback:^(NSDictionary *resultDic) {
+        [[AlipaySDK defaultService] payOrder:self.order.orderString fromScheme:scheme callback:^(NSDictionary *resultDic) {
             @strongify(self);
             [self handleDictionary:resultDic];
         }];
     });
 }
-
 
 - (BOOL)handleOpenURL:(NSURL *)url options:(NSDictionary *)options {
     if ([url.host isEqualToString:@"safepay"] || [url.host isEqualToString:@"platformapi"]) {//支付宝回调
@@ -79,37 +74,6 @@
             _complation(_order, [PHPayErrorUtils create:PHPayCodeErrorUnknown]);
             break;
     }
-}
-
-- (NSString *)orderDescription {
-    NSMutableString * discription = [NSMutableString string];
-    [discription appendFormat:@"partner=\"%@\"", [self stringForKey:@"partner"]];
-    [discription appendFormat:@"&seller_id=\"%@\"", [self stringForKey:@"seller"]];
-    [discription appendFormat:@"&out_trade_no=\"%@\"", [self stringForKey:@"out_trade_no"]];
-    [discription appendFormat:@"&subject=\"%@\"", [self stringForKey:@"subject"]];
-    [discription appendFormat:@"&body=\"%@\"", [self stringForKey:@"body"]];
-    [discription appendFormat:@"&total_fee=\"%@\"", @(((float)[[self stringForKey:@"amount"] intValue])/100.)];
-    [discription appendFormat:@"&notify_url=\"%@\"", [self stringForKey:@"notifyURL"]];
-    
-    [discription appendFormat:@"&service=\"%@\"", @"mobile.securitypay.pay"];
-    [discription appendFormat:@"&_input_charset=\"%@\"", @"utf-8"];
-    [discription appendFormat:@"&payment_type=\"%@\"", @"1"];
-    
-    //下面的这些参数，如果没有必要（value为空），则无需添加
-//    [discription appendFormat:@"&return_url=\"%@\"", @""];
-//    [discription appendFormat:@"&it_b_pay=\"%@\"", @""];
-//    [discription appendFormat:@"&show_url=\"%@\"", @""];
-    
-    return discription;
-}
-
-- (NSString *)stringForKey:(NSString *)key {
-    NSString *value = @"";
-    if ([_order.credential.allKeys containsObject:key] && [_order.credential objectForKey:key]) {
-        value = [_order.credential objectForKey:key];
-    }
-    
-    return value;
 }
 
 

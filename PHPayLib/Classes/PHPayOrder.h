@@ -36,6 +36,8 @@
 @property (nonatomic, strong) NSString *notifyURL;
 //商家名称
 @property (nonatomic, strong) NSString *shopName;//商家名称
+/// 支付字符串
+@property (nonatomic, strong) NSString *orderString;
 
 //差异问题
 // 支付凭证，用于客户端发起支付
