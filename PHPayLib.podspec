@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.source_files = 'PHPayLib/Classes/*.{h,m}'
   s.public_header_files = 'PHPayLib/Classes/*.h'
   
-  s.dependency 'OpenSSL'
+  s.dependency 'OpenSSL-Universal'
   s.dependency 'ReactiveObjC'
   s.dependency 'YLT_BaseLib'
   

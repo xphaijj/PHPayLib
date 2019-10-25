@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="00: import_from_git" time="3.788733">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="01: git_pull" time="3.224636">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="02: ensure_git_branch" time="0.007923">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="03: version_bump_podspec" time="0.003113">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="04: git_add" time="0.433986">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="05: git_commit" time="0.577309">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="06: push_to_git_remote" time="9.217754">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="07: git_tag_exists" time="0.017015">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="08: add_git_tag" time="0.015569">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="09: push_git_tags" time="6.051706">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="10: pod_lib_lint" time="25.236123">
+        
+          <failure message="/Library/Ruby/Gems/2.6.0/gems/fastlane-2.125.2/fastlane/lib/fastlane/actions/actions_helper.rb:48:in `execute_action'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.125.2/fastlane/lib/fastlane/runner.rb:235:in `block in execute_action'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.125.2/fastlane/lib/fastlane/runner.rb:227:in `chdir'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.125.2/fastlane/lib/fastlane/runner.rb:227:in `execute_action'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.125.2/fastlane/lib/fastlane/runner.rb:157:in `trigger_action_by_name'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.125.2/fastlane/lib/fastlane/fast_file.rb:154:in `method_missing'&#10;../../../../../var/folders/bj/f76lshcn1d564j2tnjf4dm440000gn/T/fl_clone20191025-9073-y29pwq/fastlane-files/fastlane/Fastfile:23:in `block in parsing_binding'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.125.2/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.125.2/fastlane/lib/fastlane/runner.rb:49:in `block in execute'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.125.2/fastlane/lib/fastlane/runner.rb:45:in `chdir'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.125.2/fastlane/lib/fastlane/runner.rb:45:in `execute'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.125.2/fastlane/lib/fastlane/lane_manager.rb:56:in `cruise_lane'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.125.2/fastlane/lib/fastlane/command_line_handler.rb:36:in `handle'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.125.2/fastlane/lib/fastlane/commands_generator.rb:108:in `block (2 levels) in run'&#10;/Library/Ruby/Gems/2.6.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:178:in `call'&#10;/Library/Ruby/Gems/2.6.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:153:in `run'&#10;/Library/Ruby/Gems/2.6.0/gems/commander-fastlane-4.4.6/lib/commander/runner.rb:476:in `run_active_command'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.125.2/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:76:in `run!'&#10;/Library/Ruby/Gems/2.6.0/gems/commander-fastlane-4.4.6/lib/commander/delegates.rb:15:in `run!'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.125.2/fastlane/lib/fastlane/commands_generator.rb:333:in `run'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.125.2/fastlane/lib/fastlane/commands_generator.rb:41:in `start'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.125.2/fastlane/lib/fastlane/cli_tools_distributor.rb:119:in `take_off'&#10;/Library/Ruby/Gems/2.6.0/gems/fastlane-2.125.2/bin/fastlane:23:in `&lt;top (required)&gt;'&#10;/usr/local/bin/fastlane:23:in `load'&#10;/usr/local/bin/fastlane:23:in `&lt;main&gt;'&#10;&#10;Exit status of command 'pod lib lint --allow-warnings --use-libraries' was 1 instead of 0.&#10;&#10; -&gt; PHPayLib -&gt; PHPayLib (0.0.5)&#10;    - ERROR | [iOS] unknown: Encountered an unknown error (/bin/bash -c &#10;set -e&#10;VERSION=&quot;1.0.2j&quot;&#10;SDKVERSION=`xcrun --sdk iphoneos --show-sdk-version 2&gt; /dev/null`&#10;MIN_SDK_VERSION_FLAG=&quot;-miphoneos-version-min=7.0&quot;&#10;&#10;BASEPATH=&quot;${PWD}&quot;&#10;CURRENTPATH=&quot;/tmp/openssl&quot;&#10;ARCHS=&quot;i386 x86_64 armv7 armv7s arm64&quot;&#10;DEVELOPER=`xcode-select -print-path`&#10;&#10;mkdir -p &quot;${CURRENTPATH}&quot;&#10;mkdir -p &quot;${CURRENTPATH}/bin&quot;&#10;&#10;cp &quot;file.tgz&quot; &quot;${CURRENTPATH}/file.tgz&quot;&#10;cd &quot;${CURRENTPATH}&quot;&#10;tar -xzf file.tgz&#10;cd &quot;openssl-${VERSION}&quot;&#10;&#10;for ARCH in ${ARCHS}&#10;do&#10;  CONFIGURE_FOR=&quot;iphoneos-cross&quot;&#10;&#10;  if [ &quot;${ARCH}&quot; == &quot;i386&quot; ] || [ &quot;${ARCH}&quot; == &quot;x86_64&quot; ] ;&#10;  then&#10;    PLATFORM=&quot;iPhoneSimulator&quot;&#10;    if [ &quot;${ARCH}&quot; == &quot;x86_64&quot; ] ;&#10;    then&#10;      CONFIGURE_FOR=&quot;darwin64-x86_64-cc&quot;&#10;    fi&#10;  else&#10;    sed -ie &quot;s!static volatile sig_atomic_t intr_signal;!static volatile intr_signal;!&quot; &quot;crypto/ui/ui_openssl.c&quot;&#10;    PLATFORM=&quot;iPhoneOS&quot;&#10;  fi&#10;&#10;  export CROSS_TOP=&quot;${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer&quot;&#10;  export CROSS_SDK=&quot;${PLATFORM}${SDKVERSION}.sdk&quot;&#10;&#10;  echo &quot;Building openssl-${VERSION} for ${PLATFORM} ${SDKVERSION} ${ARCH}&quot;&#10;  echo &quot;Please stand by...&quot;&#10;&#10;  export CC=&quot;${DEVELOPER}/usr/bin/gcc -arch ${ARCH} ${MIN_SDK_VERSION_FLAG}&quot;&#10;  mkdir -p &quot;${CURRENTPATH}/bin/${PLATFORM}${SDKVERSION}-${ARCH}.sdk&quot;&#10;  LOG=&quot;${CURRENTPATH}/bin/${PLATFORM}${SDKVERSION}-${ARCH}.sdk/build-openssl-${VERSION}.log&quot;&#10;&#10;  LIPO_LIBSSL=&quot;${LIPO_LIBSSL} ${CURRENTPATH}/bin/${PLATFORM}${SDKVERSION}-${ARCH}.sdk/lib/libssl.a&quot;&#10;  LIPO_LIBCRYPTO=&quot;${LIPO_LIBCRYPTO} ${CURRENTPATH}/bin/${PLATFORM}${SDKVERSION}-${ARCH}.sdk/lib/libcrypto.a&quot;&#10;&#10;  ./Configure ${CONFIGURE_FOR} --openssldir=&quot;${CURRENTPATH}/bin/${PLATFORM}${SDKVERSION}-${ARCH}.sdk&quot; &gt; &quot;${LOG}&quot; 2&gt;&amp;1&#10;  sed -ie &quot;s!^CFLAG=!CFLAG=-isysroot ${CROSS_TOP}/SDKs/${CROSS_SDK} !&quot; &quot;Makefile&quot;&#10;&#10;  make &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1&#10;  make all install_sw &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1&#10;  make clean &gt;&gt; &quot;${LOG}&quot; 2&gt;&amp;1&#10;done&#10;&#10;&#10;echo &quot;Build library...&quot;&#10;rm -rf &quot;${BASEPATH}/lib/&quot;&#10;mkdir -p &quot;${BASEPATH}/lib/&quot;&#10;lipo -create ${LIPO_LIBSSL}    -output &quot;${BASEPATH}/lib/libssl.a&quot;&#10;lipo -create ${LIPO_LIBCRYPTO} -output &quot;${BASEPATH}/lib/libcrypto.a&quot;&#10;&#10;echo &quot;Copying headers...&quot;&#10;rm -rf &quot;${BASEPATH}/opensslIncludes/&quot;&#10;mkdir -p &quot;${BASEPATH}/opensslIncludes/&quot;&#10;cp -RL &quot;${CURRENTPATH}/openssl-${VERSION}/include/openssl&quot; &quot;${BASEPATH}/opensslIncludes/&quot;&#10;&#10;cd &quot;${BASEPATH}&quot;&#10;echo &quot;Building done.&quot;&#10;&#10;echo &quot;Cleaning up...&quot;&#10;rm -rf &quot;${CURRENTPATH}&quot;&#10;echo &quot;Done.&quot;&#10;&#10;cp: file.tgz: No such file or directory&#10;) during validation.&#10;&#10;[!] PHPayLib did not pass validation, due to 1 error.&#10;You can use the `--no-clean` option to inspect any issue.&#10;" />
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>
