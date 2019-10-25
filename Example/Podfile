@@ -13,7 +13,6 @@ target 'PHPayLib_Example' do
 
   target 'PHPayLib_Tests' do
     inherit! :search_paths
-
     
   end
 end
