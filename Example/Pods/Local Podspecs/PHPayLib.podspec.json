@@ -16,7 +16,7 @@
     "tag": "0.0.5"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "subspecs": [
     {
@@ -61,18 +61,6 @@
         "WechatOpenSDK": [
 
         ],
-        "PHPayLib/Core": [
-
-        ]
-      }
-    },
-    {
-      "name": "UnionPay",
-      "source_files": "PHPayLib/Classes/Channel/UnionPay/*.{h,m,mm}",
-      "public_header_files": "PHPayLib/Classes/Channel/UnionPay/*.h",
-      "vendored_libraries": "PHPayLib/Classes/Channel/UnionPay/*.a",
-      "frameworks": "CoreMotion",
-      "dependencies": {
         "PHPayLib/Core": [
 
         ]

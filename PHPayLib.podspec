@@ -41,13 +41,13 @@ Pod::Spec.new do |s|
     sp.dependency 'PHPayLib/Core'
   end
   
-  s.subspec 'UnionPay' do |sp|
-    sp.source_files = 'PHPayLib/Classes/Channel/UnionPay/*.{h,m,mm}'
-    sp.public_header_files = 'PHPayLib/Classes/Channel/UnionPay/*.h'
-    sp.vendored_libraries = 'PHPayLib/Classes/Channel/UnionPay/*.a'
-    sp.frameworks = 'CoreMotion'
-    sp.dependency 'PHPayLib/Core'
-  end
+#  s.subspec 'UnionPay' do |sp|
+#    sp.source_files = 'PHPayLib/Classes/Channel/UnionPay/*.{h,m,mm}'
+#    sp.public_header_files = 'PHPayLib/Classes/Channel/UnionPay/*.h'
+#    sp.vendored_libraries = 'PHPayLib/Classes/Channel/UnionPay/*.a'
+#    sp.frameworks = 'CoreMotion'
+#    sp.dependency 'PHPayLib/Core'
+#  end
   
   s.subspec 'ApplePay' do |sp|
     sp.source_files = 'PHPayLib/Classes/Channel/ApplePay/*.{h,m}'

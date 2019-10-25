@@ -7,7 +7,7 @@ target 'PHPayLib_Example' do
   pod 'PHPayLib/Core', :path => '../'
   pod 'PHPayLib/WeChatPay', :path => '../'
   pod 'PHPayLib/AliPay', :path => '../'
-  pod 'PHPayLib/UnionPay', :path => '../'
+  #pod 'PHPayLib/UnionPay', :path => '../'
   pod 'PHPayLib/ApplePay', :path => '../'
   pod 'PHPayLib/IapPay', :path => '../'
 
