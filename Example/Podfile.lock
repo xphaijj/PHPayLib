@@ -1,4 +1,5 @@
 PODS:
+  - AlipaySDK-iOS (15.5.9)
   - FastCoding (3.3)
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
@@ -14,6 +15,7 @@ PODS:
     - PHPayLib/IapPay (= 0.0.5)
     - PHPayLib/WeChatPay (= 0.0.5)
   - PHPayLib/AliPay (0.0.5):
+    - AlipaySDK-iOS
     - PHPayLib/Core
   - PHPayLib/ApplePay (0.0.5):
     - PHPayLib/Core
@@ -43,6 +45,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AlipaySDK-iOS
     - FastCoding
     - FMDB
     - MJExtension
@@ -56,11 +59,12 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  AlipaySDK-iOS: 1c5283b30977a24acecc0114662697f7dc78f618
   FastCoding: 3b590f7143a229780fa744b35084d85d9461587e
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
   OpenSSL-Universal: 8b48cc0d10c1b2923617dfe5c178aa9ed2689355
-  PHPayLib: 5da6f3a7f4663fe2fff3feaff4e52ae93f2cad06
+  PHPayLib: 027d1675e544341fe5eb22cb383172d82281ebfd
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   WechatOpenSDK: 368ae03b72ee3ea1328c4f11326fbb5d2721d118
   YLT_BaseLib: dfdd1377329956d71a4ab39b7e33bd94dc691a12

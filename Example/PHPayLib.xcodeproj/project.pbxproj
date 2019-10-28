@@ -248,7 +248,7 @@
 				ORGANIZATIONNAME = "xphaijj0305@126.com";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = UZGK9HUE57;
+						DevelopmentTeam = 34SBFPYG2R;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -260,6 +260,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -304,7 +305,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PHPayLib_Example/Pods-PHPayLib_Example-resources.sh",
-				"${PODS_ROOT}/../../PHPayLib/Classes/Channel/AliPay/AlipaySDK.bundle",
+				"${PODS_ROOT}/AlipaySDK-iOS/AlipaySDK.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -488,7 +489,7 @@
 			baseConfigurationReference = 42B8EBB5DE7AA3DE2DD16531 /* Pods-PHPayLib_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UZGK9HUE57;
+				DEVELOPMENT_TEAM = 34SBFPYG2R;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PHPayLib/PHPayLib-Prefix.pch";
@@ -506,7 +507,7 @@
 			baseConfigurationReference = FF9CE9AC4585879496266E8A /* Pods-PHPayLib_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UZGK9HUE57;
+				DEVELOPMENT_TEAM = 34SBFPYG2R;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PHPayLib/PHPayLib-Prefix.pch";

@@ -46,12 +46,15 @@
         "PHPayLib/Classes/Channel/AliPay/Util/*.h"
       ],
       "vendored_frameworks": "PHPayLib/Classes/Channel/Alipay/*.framework",
-      "resources": "PHPayLib/Classes/Channel/Alipay/*.bundle",
       "dependencies": {
+        "AlipaySDK-iOS": [
+
+        ],
         "PHPayLib/Core": [
 
         ]
-      }
+      },
+      "resources": "PHPayLib/Classes/Channel/Alipay/*.bundle"
     },
     {
       "name": "WeChatPay",

@@ -30,6 +30,7 @@ Pod::Spec.new do |s|
     sp.source_files = 'PHPayLib/Classes/Channel/AliPay/*.{h,m}','PHPayLib/Classes/Channel/AliPay/Util/*.{h,m}'
     sp.public_header_files = 'PHPayLib/Classes/Channel/AliPay/*.h','PHPayLib/Classes/Channel/AliPay/Util/*.h'
     sp.vendored_frameworks = 'PHPayLib/Classes/Channel/Alipay/*.framework'
+    sp.dependency 'AlipaySDK-iOS'
     sp.resources = 'PHPayLib/Classes/Channel/Alipay/*.bundle'
     sp.dependency 'PHPayLib/Core'
   end
