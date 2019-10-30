@@ -43,10 +43,8 @@ Pod::Spec.new do |s|
   s.subspec 'UnionPay' do |sp|
     sp.source_files = 'PHPayLib/Classes/Channel/UnionPay/*.{h,m,mm}'
     sp.public_header_files = 'PHPayLib/Classes/Channel/UnionPay/*.h'
-    sp.vendored_libraries = 'PHPayLib/Classes/Channel/UnionPay/*.a'
-    sp.frameworks = 'CoreMotion'
     sp.dependency 'PHPayLib/Core'
-    sp.user_target_xcconfig = {'OTHER_LDFLAGS' => ['-lc++']}
+    sp.dependency 'UnionPaySDK'
   end
   
   s.subspec 'ApplePay' do |sp|

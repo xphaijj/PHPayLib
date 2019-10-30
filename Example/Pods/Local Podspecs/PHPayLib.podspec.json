@@ -71,16 +71,12 @@
       "name": "UnionPay",
       "source_files": "PHPayLib/Classes/Channel/UnionPay/*.{h,m,mm}",
       "public_header_files": "PHPayLib/Classes/Channel/UnionPay/*.h",
-      "vendored_libraries": "PHPayLib/Classes/Channel/UnionPay/*.a",
-      "frameworks": "CoreMotion",
       "dependencies": {
         "PHPayLib/Core": [
 
-        ]
-      },
-      "user_target_xcconfig": {
-        "OTHER_LDFLAGS": [
-          "-lc++"
+        ],
+        "UnionPaySDK": [
+
         ]
       }
     },
