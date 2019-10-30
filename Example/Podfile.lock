@@ -13,6 +13,7 @@ PODS:
     - PHPayLib/ApplePay (= 0.0.5)
     - PHPayLib/Core (= 0.0.5)
     - PHPayLib/IapPay (= 0.0.5)
+    - PHPayLib/UnionPay (= 0.0.5)
     - PHPayLib/WeChatPay (= 0.0.5)
   - PHPayLib/AliPay (0.0.5):
     - AlipaySDK-iOS
@@ -24,6 +25,8 @@ PODS:
     - ReactiveObjC
     - YLT_BaseLib
   - PHPayLib/IapPay (0.0.5):
+    - PHPayLib/Core
+  - PHPayLib/UnionPay (0.0.5):
     - PHPayLib/Core
   - PHPayLib/WeChatPay (0.0.5):
     - PHPayLib/Core
@@ -41,6 +44,7 @@ DEPENDENCIES:
   - PHPayLib/ApplePay (from `../`)
   - PHPayLib/Core (from `../`)
   - PHPayLib/IapPay (from `../`)
+  - PHPayLib/UnionPay (from `../`)
   - PHPayLib/WeChatPay (from `../`)
 
 SPEC REPOS:
@@ -64,11 +68,11 @@ SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
   OpenSSL-Universal: 8b48cc0d10c1b2923617dfe5c178aa9ed2689355
-  PHPayLib: 40d30a3307416b5df0acf9f7ffbee4dd3bfdb648
+  PHPayLib: 5eed97c58118180e9fa217fa16c10f4f96d5d396
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   WechatOpenSDK: 368ae03b72ee3ea1328c4f11326fbb5d2721d118
   YLT_BaseLib: dfdd1377329956d71a4ab39b7e33bd94dc691a12
 
-PODFILE CHECKSUM: 4b5a53924c1785a921ff9b147bd30127c9e1c2eb
+PODFILE CHECKSUM: 65f4eea21029468b34b17b811e076c5d332f595e
 
 COCOAPODS: 1.8.4
