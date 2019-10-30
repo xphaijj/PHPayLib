@@ -46,6 +46,7 @@ Pod::Spec.new do |s|
     sp.vendored_libraries = 'PHPayLib/Classes/Channel/UnionPay/*.a'
     sp.frameworks = 'CoreMotion'
     sp.dependency 'PHPayLib/Core'
+    sp.user_target_xcconfig = {'OTHER_LDFLAGS' => ['-lc++']}
   end
   
   s.subspec 'ApplePay' do |sp|

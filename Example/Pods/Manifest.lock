@@ -8,27 +8,27 @@ PODS:
   - OpenSSL-Universal (1.0.2.19):
     - OpenSSL-Universal/Static (= 1.0.2.19)
   - OpenSSL-Universal/Static (1.0.2.19)
-  - PHPayLib (0.0.5):
-    - PHPayLib/AliPay (= 0.0.5)
-    - PHPayLib/ApplePay (= 0.0.5)
-    - PHPayLib/Core (= 0.0.5)
-    - PHPayLib/IapPay (= 0.0.5)
-    - PHPayLib/UnionPay (= 0.0.5)
-    - PHPayLib/WeChatPay (= 0.0.5)
-  - PHPayLib/AliPay (0.0.5):
+  - PHPayLib (0.0.6):
+    - PHPayLib/AliPay (= 0.0.6)
+    - PHPayLib/ApplePay (= 0.0.6)
+    - PHPayLib/Core (= 0.0.6)
+    - PHPayLib/IapPay (= 0.0.6)
+    - PHPayLib/UnionPay (= 0.0.6)
+    - PHPayLib/WeChatPay (= 0.0.6)
+  - PHPayLib/AliPay (0.0.6):
     - AlipaySDK-iOS
     - PHPayLib/Core
-  - PHPayLib/ApplePay (0.0.5):
+  - PHPayLib/ApplePay (0.0.6):
     - PHPayLib/Core
-  - PHPayLib/Core (0.0.5):
+  - PHPayLib/Core (0.0.6):
     - OpenSSL-Universal
     - ReactiveObjC
     - YLT_BaseLib
-  - PHPayLib/IapPay (0.0.5):
+  - PHPayLib/IapPay (0.0.6):
     - PHPayLib/Core
-  - PHPayLib/UnionPay (0.0.5):
+  - PHPayLib/UnionPay (0.0.6):
     - PHPayLib/Core
-  - PHPayLib/WeChatPay (0.0.5):
+  - PHPayLib/WeChatPay (0.0.6):
     - PHPayLib/Core
     - WechatOpenSDK
   - ReactiveObjC (3.1.1)
@@ -68,7 +68,7 @@ SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
   OpenSSL-Universal: 8b48cc0d10c1b2923617dfe5c178aa9ed2689355
-  PHPayLib: 5eed97c58118180e9fa217fa16c10f4f96d5d396
+  PHPayLib: e502e71271b5ac592cac5fb4b4ece0f97fbd6512
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   WechatOpenSDK: 368ae03b72ee3ea1328c4f11326fbb5d2721d118
   YLT_BaseLib: dfdd1377329956d71a4ab39b7e33bd94dc691a12
